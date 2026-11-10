@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battle Royale 3D - FPS</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <!-- Three.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  <div id="game-container">
+    <div id="crosshair">+</div>
+
+    <!-- HUD de la partida -->
+    <div id="hud">
+      <div class="hud-top-left">
+        <div class="stat-box">
+          <span class="label">JUGADORES VIVOS</span>
+          <span id="aliveCount" class="value">20</span>
+        </div>
+        <div class="stat-box">
+          <span class="label">BAJAS</span>
+          <span id="killsCount" class="value">0</span>
+        </div>
+      </div>
+
+      <div class="hud-top-right">
+        <div class="stat-box warning">
+          <span class="label" id="zoneStatus">LA ZONA SE CIERRA EN</span>
+          <span id="zoneTimer" class="value">30s</span>
+        </div>
+      </div>
+
+      <div class="hud-bottom-left">
+        <div class="bar-container">
+          <div class="bar-label">SALUD</div>
+          <div class="bar-bg">
+            <div id="healthBar" class="bar-fill health"></div>
+          </div>
+        </div>
+        <div class="stat-box inline">
+          <span class="label">MUNICIÓN</span>
+          <span id="ammoCount" class="value">30 / 90</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pantalla de Inicio / Fin de Partida -->
+    <div id="overlay" class="overlay active">
+      <div class="modal">
+        <h1 id="modalTitle">BATTLE ROYALE FPS 3D</h1>
+        <p id="modalSub">Modo Primera Persona con Apuntado (ADS). Sobrevive en Todos Contra Todos.</p>
+        <div class="controls-info">
+          <p><strong>Controles:</strong></p>
+          <p>🎮 <strong>WASD / Flechas:</strong> Moverse</p>
+          <p>🎯 <strong>Mouse:</strong> Mirar a 360° (Primera Persona)</p>
+          <p>🔍 <strong>Click Derecho (Mantener):</strong> Apuntar / Zoom (ADS)</p>
+          <p>💥 <strong>Click Izquierdo:</strong> Disparar</p>
+          <p>🔄 <strong>Tecla R:</strong> Recargar</p>
+        </div>
+        <button id="startBtn">¡JUGAR EN PRIMERA PERSONA!</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="static/js/script.js"></script>
+</body>
+</html>
